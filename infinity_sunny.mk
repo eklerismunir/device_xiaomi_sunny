@@ -11,12 +11,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sunny device
 $(call inherit-product, device/xiaomi/sunny/device.mk)
 
-# Inherit some common YAAP stuff.
-$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
+# Inherit some common Infinity-X stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+INFINITY_BUILD_TYPE := OFFICIAL
+INFINITY_MAINTAINER := "Munir (eklerismunir)"
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_BLUR := false
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := yaap_sunny
+PRODUCT_NAME := infinity_sunny
 PRODUCT_DEVICE := sunny
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2101K7AG
